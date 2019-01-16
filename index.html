@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spoon</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+    <header id="header" class="mainHead">
+        <div class="row">
+            <div class="iconBox">
+                <a class="active" href="#"><i class="fab fa-resolving fa-7x"></i></a>
+                <h2 class="titleName">Recipe It</h2>
+            </div>
+            <div class="navTab">
+                <ul>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="getCooking">
+        <h1>Get cooking!</h1>
+        <h3>Find a recipe by the <span>Dish</span>, a certain <span>Ingredient</span> or by the <span>Type</span> of food</h3>
+    </div>
+
+
+    <div class="tabContainer">
+        <nav id="this-tab-set" class="radio-tabs">
+                <input id="tab-1" type="radio" name="tabs" checked>
+                <label for="tab-1">Dish</label>
+                
+                <input id="tab-2" type="radio" name="tabs">
+                <label for="tab-2">Ingredient</label>
+                
+                <input id="tab-3" type="radio" name="tabs">
+                <label for="tab-3">Type</label>
+                
+                
+                
+                <div class="tab-1-display display"> <h1>Search by Dish </h1>
+                    <form>
+                        <input type="text" id="searchTerm" placeholder="Pizza, Burger, Pasta...">
+                        <br/>
+                        <input type="submit" value="Search" class="button"></input>
+                    </form>
+                </div>
+                <div class="tab-2-display display"> <h1>Search by Ingredient</h1>
+                    <form>
+                        <input type="text" id="searchTerm" placeholder="Cheese, Onion, Beans..."> 
+                        <br/> 
+                        <input type="submit" value="Search" class="button"></input>
+                    </form>
+                </div>
+                <div class="tab-3-display display"> <h1>Search by Type</h1> 
+                    <form>
+                        <input type="text" id="searchTerm" placeholder="American, Japanese, Mexican...">
+                        <br/>
+                        <input type="submit" value="Search" class="button"></input>
+                    </form>
+                </div>
+        </nav>
+    </div>
+
+    <div class="cardContainer">
+        <section class="cards">
+            
+        </section>
+    </div>
+
+
+    
+        
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
+        
+        

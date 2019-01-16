@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+}
+
+body {
+    background-image: url('/images/ingredSmall.jpg');
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+ 
+
+header {
+    
+    position: relative;
+    height: 3em;
+    width: 100%;
+    
+    display: block;
+    box-sizing: inherit;
+
+}
+
+.row {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    box-sizing: inherit;
+    
+}
+
+.iconBox {
+    position: relative;
+    background-color: rgb(40,43,46);
+    margin-left: 10%;
+    padding: 60px;
+    display: block;
+}
+    
+.iconBox a {
+    color: #ddae71;
+    
+    
+}   
+
+.iconBox h2 {
+  color: rgb(110, 112, 114);  
+}
+
+.cardContainer {
+    display: none;
+}
+    
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 0 1 calc(33% - 1em);
+}
+
+img {
+    display: block;
+    border: 0;
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    background: rgb(40,43,46);
+    margin-bottom: 2em;
+}
+
+.card-content {
+    padding: 1.4em;
+}
+
+
+.tabContainer {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    color: rgb(163, 174, 182);
+   justify-content: center;
+    margin: 200px auto;
+    align-items: center;
+    width: 800px;
+    height: 400px;
+    position: relative;
+    
+    
+}
+
+.getCooking {
+    position: relative;
+    color: #fff;
+    margin-top: 2em;
+    text-align: center;
+}
+
+.getCooking h1 {
+    color: #ddae71;
+    font-size: 3em;
+
+}
+
+.getCooking h3 {
+    position: relative;
+    margin-top: 20px;
+}
+
+.getCooking h3 span {
+    color: #ddae71;
+}
+label {
+    display: block;
+    text-align: center;
+    
+
+    
+}
+
+.radio {
+    position: relative;
+    
+    display: block;
+  }
+
+  #this-tab-set > label,
+  #this-tab-set > .display {
+    position: relative;
+    float: left;  
+    background-color: rgba(3, 4, 4, 0.6);
+    padding: 4em;
+  }
+  #this-tab-set > label {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-top: 0em;
+    -webkit-transition: margin .25s;
+    
+  }
+  #this-tab-set > input:checked + label {
+    background-color: rgb(100, 100, 100);
+    margin-top: -.75em;
+    border: 2px solid #ddae71;
+
+    box-shadow:
+        0em .5em 1em -.2em rgba(0,0,0, .5),
+        0em .5em .5em -.2em rgba(0,0,0, .7);
+        z-index: 3;
+    
+   
+  }
+  #this-tab-set > label:hover {
+    box-shadow: 
+      0em .5em 1em -.2em rgba(0,0,0, .25),
+      0em .5em .5em -.2em rgba(0,0,0, .3);
+    
+    margin-top: -.3em;
+  }
+  
+  #this-tab-set > input:checked + label {
+    background-color: rgba(3, 4, 4, 0.6);
+    opacity: initial;
+
+  }
+  #this-tab-set > .display {
+    clear: both;
+    width: 548px; 
+    padding: 4em;
+    border: 2px solid #ddae71;
+    text-align: center;
+    font-size: 30px;
+    
+    
+  }
+
+  form #searchTerm {
+      padding: 15px 30px;
+      width: 100%;
+      background-color: rgb(40,43,46);
+      border: 1px solid #ddae71;
+      color: #ddae71;
+      font-size: .5em;
+  }
+
+.button {
+      padding: 15px 25px;
+      color: #ddae71;
+      font-size: .5em;
+      background-color: rgb(40,43,46);
+      border: 1px solid #ddae71;
+}
+
+  
+ 
+  #this-tab-set {
+    border-radius: 2em;  
+ }  
+  
+  #this-tab-set > label:nth-child(2) {
+    border-top-left-radius: inherit;
+  }
+  #this-tab-set > label:nth-child(6) {
+    border-top-right-radius: inherit;
+  }
+  #this-tab-set > .display {
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+  }
+  .radio-tabs > input {
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  .radio-tabs > label {
+    cursor: pointer;
+  }
+  .radio-tabs > .display {
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  .radio-tabs > .tab-1-display {
+    position: relative;
+    visibility: visible;
+  }
+  .radio-tabs > #tab-1:checked ~ .tab-1-display {
+    position: relative;
+    visibility: visible;
+  }
+  .radio-tabs > #tab-1:checked ~ .tab-2-display,
+  .radio-tabs > #tab-1:checked ~ .tab-3-display {
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  .radio-tabs > #tab-2:checked ~ .tab-2-display {
+    position: relative;
+    visibility: visible;
+  }
+  .radio-tabs > #tab-2:checked ~ .tab-3-display,
+  .radio-tabs > #tab-2:checked ~ .tab-1-display {
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  .radio-tabs > #tab-3:checked ~ .tab-3-display {
+    position: relative;
+    visibility: visible;
+  }
+  .radio-tabs > #tab-3:checked ~ .tab-2-display,
+  .radio-tabs > #tab-3:checked ~ .tab-1-display {
+    position: absolute;
+    visibility: hidden;
+  }
+
