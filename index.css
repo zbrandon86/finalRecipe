@@ -36,6 +36,7 @@ header {
     
 }
 
+
 .iconBox {
     position: relative;
     background-color: rgb(40,43,46);
@@ -54,8 +55,34 @@ header {
   color: rgb(110, 112, 114);  
 }
 
+@media screen and (min-width: 40em){
+    .iconBox{
+        font-size: 10px;
+        padding: 30px;
+    }
+    .getCooking {
+        margin-top: 1em;
+    }
+    .getCooking h1{
+        font-size: 2em;
+    }
+    .getCooking h3{
+        font-size: 1em;
+    }
+    .tabContainer{
+        margin: 50px auto;
+        width: 200px;
+        height: 100px;
+    }
+    #this-tab-set > label,
+    #this-tab-set > .display{
+        padding: 1em;
+    }
+}
+
 .cardContainer {
     display: none;
+    margin: 5%;
 }
     
 .cards {
@@ -65,7 +92,7 @@ header {
 }
 
 .card {
-    flex: 0 1 calc(33% - 1em);
+    flex: 0 1 calc(30% - 1em);
 }
 
 img {
@@ -78,10 +105,23 @@ img {
 .card {
     background: rgb(40,43,46);
     margin-bottom: 2em;
+    border-radius: 10px;
+    box-shadow:
+    rgba(black, 0.66) 0 30px 60px 0,
+    inset #333 0 0 0 5px,
+    inset rgba(white, 0.5) 0 0 0 6px;
+}
+
+.displayNone{
+    display: none;
 }
 
 .card-content {
     padding: 1.4em;
+    color: #ddae71;
+    text-align: center;
+    
+    
 }
 
 
@@ -123,9 +163,6 @@ img {
 label {
     display: block;
     text-align: center;
-    
-
-    
 }
 
 .radio {
@@ -204,7 +241,7 @@ label {
   
  
   #this-tab-set {
-    border-radius: 2em;  
+    border-radius: 1em;  
  }  
   
   #this-tab-set > label:nth-child(2) {
@@ -264,3 +301,5 @@ label {
     visibility: hidden;
   }
 
+
+  
