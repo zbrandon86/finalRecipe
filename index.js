@@ -49,7 +49,7 @@ function useResults(data){
 
         
 
-        let image = value.smallImageUrls[0];
+        let image = value.smallImageUrls[90];
         let recipeName = value.recipeName.substring(0, 45);
         let thumbnail = '<article class="card" id="' + value.id + '">'
         thumbnail += '<div class="recipeCard"><p class="rating"><i class="fas fa-star"></i> <span>' + value.rating + '</span></p>';
