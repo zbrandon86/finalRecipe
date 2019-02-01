@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('https://github.com/zbrandon86/finalRecipe/blob/master/images/ingredSmall.jpg');
+    background-image: url('./images/ingredSmall.jpg');
     background-repeat: no-repeat;
     position: relative;
     background-size: cover;
