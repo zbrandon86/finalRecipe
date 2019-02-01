@@ -105,7 +105,6 @@ header {
   padding-top: 2em;
   padding-bottom: 2em;
   margin-top: 0em;
-  -webkit-transition: margin .25s;
   
 }
 #this-tab-set > input:checked + label {
@@ -768,27 +767,4 @@ p.totalTime > span {
 
   
 
- /* @media screen and (min-width: 40em){
-    .iconBox{
-        font-size: 10px;
-        padding: 30px;
-    }
-    .getCooking {
-        margin-top: 1em;
-    }
-    .getCooking h1{
-        font-size: 2em;
-    }
-    .getCooking h3{
-        font-size: 1em;
-    }
-    .tabContainer{
-        margin: 50px auto;
-        width: 200px;
-        height: 100px;
-    }
-    #this-tab-set > label,
-    #this-tab-set > .display{
-        padding: 1em;
-    }
-} */
+ 
