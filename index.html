@@ -48,24 +48,24 @@
                 
                 
                 <div class="tab-1-display display"> <h1>Search by Dish </h1>
-                    <form>
-                        <input type="text" id="searchTerm" placeholder="Pizza, Burger, Pasta...">
+                    <form class="firstForm">
+                        <input type="text" id="searchTerm" placeholder="Pizza, Burger, Pasta..." required />
                         <br/>
-                        <input type="submit" value="Search" class="button"></input>
+                        <input type="submit" value="Search" class="dishButton">
                     </form>
                 </div>
-                <div class="tab-2-display display"> <h1>Search by Ingredient</h1>
-                    <form>
-                        <input type="text" id="searchTerm" placeholder="Cheese, Onion, Beans..."> 
+                <div class="tab-2-display display"> <h1>Search by 1 Ingredient</h1>
+                    <form class="secondForm">
+                        <input type="text" id="searchTermIngred" placeholder="Cheese, Onion Powder..." required />
                         <br/> 
-                        <input type="submit" value="Search" class="button"></input>
+                        <input type="submit" value="Search" class="ingredButton">
                     </form>
                 </div>
                 <div class="tab-3-display display"> <h1>Search by Type</h1> 
-                    <form>
-                        <input type="text" id="searchTerm" placeholder="American, Japanese, Mexican...">
+                    <form class="thirdForm">
+                        <input type="text" id="searchTermType" placeholder="American, Japanese, Mexican..." required />
                         <br/>
-                        <input type="submit" value="Search" class="button"></input>
+                        <input type="submit" value="Search" class="typeButton">
                     </form>
                 </div>
         </nav>
@@ -76,9 +76,19 @@
             
         </section>
     </div>
+    <div class="recpDetails" id="results">
+        <section class="recpInfo">
+            
+
+        </section>
+
+    </div>
+    <section class="yumLogo">
+        <img src="https://static.yummly.co/api-logo.png">
+    </section>
 
 
-    
+    <div id="errMsg"></div>
         
 
 

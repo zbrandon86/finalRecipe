@@ -20,9 +20,9 @@ header {
     position: relative;
     height: 3em;
     width: 100%;
-    
     display: block;
     box-sizing: inherit;
+    
 
 }
 
@@ -40,22 +40,735 @@ header {
 .iconBox {
     position: relative;
     background-color: rgb(40,43,46);
-    margin-left: 10%;
-    padding: 60px;
+    margin-left: 8%;
+    padding: 36px;
     display: block;
+    font-size: 12px;
 }
     
 .iconBox a {
     color: #ddae71;
-    
-    
+
 }   
 
 .iconBox h2 {
   color: rgb(110, 112, 114);  
 }
 
-@media screen and (min-width: 40em){
+.getCooking {
+    position: relative;
+    color: #fff;
+    margin-top: 2.2em;
+    text-align: center;
+}
+
+.getCooking h1 {
+    color: #ddae71;
+    font-size: 3.5em;
+
+}
+
+.getCooking h3 {
+    position: relative;
+    margin-top: 2.4em;
+    font-size: 1.2em;
+}
+
+.getCooking h3 span {
+    color: #ddae71;
+}
+
+.tabContainer {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    color: rgb(163, 174, 182);
+    justify-content: center;
+    margin: 130px auto;
+    align-items: center;
+    width: 800px;
+    height: 400px;
+    position: relative;
+}
+
+.radio {
+    position: relative;
+    display: block;
+}  
+
+#this-tab-set > label {
+  position: relative;
+  float: left;  
+  background-color: rgba(3, 4, 4, 0.6);
+  padding: 4em;
+}
+#this-tab-set > label {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-top: 0em;
+  -webkit-transition: margin .25s;
+  
+}
+#this-tab-set > input:checked + label {
+  background-color: rgb(100, 100, 100);
+  margin-top: -.75em;
+  border: 2px solid #ddae71;
+
+  box-shadow:
+      0em .5em 1em -.2em rgba(0,0,0, .5),
+      0em .5em .5em -.2em rgba(0,0,0, .7);
+      z-index: 3;
+  
+ 
+}
+#this-tab-set > label:hover {
+  box-shadow: 
+    0em .5em 1em -.2em rgba(0,0,0, .25),
+    0em .5em .5em -.2em rgba(0,0,0, .3);
+  
+  margin-top: -.3em;
+}
+
+#this-tab-set > input:checked + label {
+  background-color: rgba(3, 4, 4, 0.6);
+  opacity: initial;
+
+}
+#this-tab-set > .display {
+  clear: both;
+  position: relative;
+  width: 548px; 
+  padding: 3em;
+  border: 2px solid #ddae71;
+  text-align: center;
+  font-size: 2em;
+  background-color: rgba(3, 4, 4, 0.6);
+}
+  
+#this-tab-set {
+    border-radius: 1em;  
+}  
+  
+#this-tab-set > label:nth-child(2) {
+    border-top-left-radius: inherit;
+}
+#this-tab-set > label:nth-child(6) {
+    border-top-right-radius: inherit;
+}
+#this-tab-set > .display {
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+.radio-tabs > input {
+    position: absolute;
+    visibility: hidden;
+}
+  
+.radio-tabs > label {
+    cursor: pointer;
+}
+.radio-tabs > .display {
+    position: absolute;
+    visibility: hidden;
+}
+  
+.radio-tabs > .tab-1-display {
+    position: relative;
+    visibility: visible;
+}
+.radio-tabs > #tab-1:checked ~ .tab-1-display {
+    position: relative;
+    visibility: visible;
+}
+.radio-tabs > #tab-1:checked ~ .tab-2-display,
+.radio-tabs > #tab-1:checked ~ .tab-3-display {
+    position: absolute;
+    visibility: hidden;
+}
+  
+.radio-tabs > #tab-2:checked ~ .tab-2-display {
+    position: relative;
+    visibility: visible;
+}
+.radio-tabs > #tab-2:checked ~ .tab-3-display,
+.radio-tabs > #tab-2:checked ~ .tab-1-display {
+    position: absolute;
+    visibility: hidden;
+}
+  
+.radio-tabs > #tab-3:checked ~ .tab-3-display {
+    position: relative;
+    visibility: visible;
+}
+.radio-tabs > #tab-3:checked ~ .tab-2-display,
+.radio-tabs > #tab-3:checked ~ .tab-1-display {
+    position: absolute;
+    visibility: hidden;
+}
+
+form #searchTerm,
+#searchTermIngred,
+#searchTermType {
+      padding: 10px 26px;
+      text-align: center;
+      width: 100%;
+      margin-top: 10px;
+      background-color: rgb(40,43,46);
+      border: 1px solid #ddae71;
+      color: #ddae71;
+      font-size: .5em;
+}
+
+label {
+    display: block;
+    text-align: center;
+}
+
+
+form .dishButton,
+.ingredButton,
+.typeButton {
+      padding: 12px 18px;
+      color: #ddae71;
+      margin-top: 5px;
+      font-size: .5em;
+      background-color: rgb(40,43,46);
+      border: 1px solid #ddae71;
+}
+
+
+
+.cardContainer {
+    display: none;
+    margin: 5%;
+}
+    
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 0 1 calc(18% - 1em);
+    background: rgb(40,43,46);
+    margin-bottom: 1em;
+    border-radius: 4px;
+    box-shadow:
+    rgba(black, 0.66) 0 30px 60px 0,
+    inset #333 0 0 0 5px,
+    inset rgba(white, 0.5) 0 0 0 6px;
+}
+
+.card-content {
+    padding: 1.2em;
+    color: #ddae71;
+    text-align: center;
+}
+
+.card-content h2 {
+    font-size: .5em;
+}
+
+.new-card-content {
+    padding: 4em;
+    color: #ddae71;
+    text-align: center;
+}
+
+.new-card-content h2 {
+    font-size: 2em;
+    color: #ffe9cd;
+    
+}
+
+.servings {
+    margin: 5px;
+    float: left;
+    font-size: 1.2em;
+    color: #ddae71;
+}
+
+.time {
+    margin: 5px;
+    float: right;
+    font-size: 1.2em;
+    color: #ddae71;
+}
+
+.sourceLink {
+    color: #ddae71;
+    font-size: 1.2em;
+    margin: 5px;
+}
+
+.sourceLink:hover {
+    opacity: 0.7;
+    color: #ddae71;
+}
+
+.rating {
+    font-size: 2em;
+    color: #ddae71;
+}
+
+.newCardInfo {
+    margin-top: 8px;
+}
+
+
+.recpInfo {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin: 20px;
+    
+}
+
+.cardInfo {
+    background: rgb(40,43,46);
+    margin-bottom: 2em;
+    border-radius: 4px;
+    box-shadow:
+    rgba(black, 0.66) 0 30px 60px 0,
+    inset #333 0 0 0 5px,
+    inset rgba(white, 0.5) 0 0 0 6px;
+}
+
+
+.recipeCard {
+    color: #ddae71;
+    display: flex;
+    align-items: center; 
+}
+
+.fa-clock {
+    font-size: 11px;
+    color: #ffe6c5;
+}
+
+.fa-star {
+    color: #ffe6c5;
+}
+
+p.rating {
+    font-size: .5em;
+    text-align: center;
+    justify-content: flex-start;
+}
+p.rating > span {
+    padding: 1px 32px;
+    display: table;
+}
+
+ p.totalTime {
+    font-size: .5em;
+    text-align: center;
+    justify-content: flex-end;
+}
+
+p.totalTime > span {
+    display: table;
+}
+
+.thumbnail {
+    display: flex;
+    align-items: center;
+}
+
+.thumbnail img {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: 100px;
+    
+}
+
+.thumbImg:hover {
+    opacity: 0.3;
+}
+
+.thumbnail .name {
+    width: 160px;
+    height: 60px;
+}	
+
+.newImg {
+    display: flex;
+    align-items: center;
+}
+
+.newImg img {
+    text-align: center;
+    margin: auto;
+    width: 60%;
+}
+
+.yumLogo {
+    display: flex;
+    justify-content: center;
+}
+
+  
+ 
+  
+
+  @media (min-width: 321px) and (max-width: 480px){
+    .iconBox {
+        font-size: 6px;
+        padding: 13px; 
+        margin-left: 2%;
+    }
+    .getCooking {
+        margin-top: 5px;
+    }
+    
+    .getCooking h1 {
+        font-size: 2.1em;
+        
+    }
+
+    .getCooking h3 {
+        font-size: .8em;
+        
+    }
+    .tabContainer {
+        margin-top: 180px;
+        width: 200px;
+        height: 100px;
+    }
+    #this-tab-set > label,
+    #this-tab-set > .display {
+        padding: 2em;
+    }
+    #this-tab-set > label {
+        padding-top: 1.2em;
+        padding-bottom: 1em;
+        margin-top: 0em;
+        font-size: .7em;
+    }
+    #this-tab-set > input:checked + label {
+        margin-top: -.50em;
+    }
+    #this-tab-set > .display {
+        width: 251px; 
+        padding: 2em;
+        border: 2px solid #ddae71;
+        font-size: 10px;
+        padding: 60px;
+    }
+    #this-tab-set {
+          border-radius: 1em;  
+    }
+    .display h1 {
+        font-size: 2em;
+    }
+    form #searchTerm,
+    #searchTermIngred,
+    #searchTermType {
+      padding: 8px 30px;
+      width: 100%;
+      font-size: .6em;
+      margin-top: 10px;
+    }
+    form .dishButton,
+    .ingredButton,
+    .typeButton {
+      padding: 7px 12px;
+      font-size: .4em;
+      margin-top: 5px;
+    }
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
+    
+    .card-content {
+        padding: 1em;
+        font-size: .8em;
+    }
+    p.rating > span {
+        padding: 1px 40px;
+    }
+    
+
+    .recipeCard p {
+        font-size: .5em;
+    }
+    .servings {
+        margin: 5px;
+        float: left;
+        font-size: .7em;
+        color: #ddae71;
+    }
+    
+    .time {
+        margin: 5px;
+        float: right;
+        font-size: .7em;
+        color: #ddae71;
+    }
+    .sourceLink {
+        color: #ddae71;
+        font-size: 1.2em;
+        margin: 5px;
+    }
+    
+    .rating {
+        font-size: .8em;
+        color: #ddae71;
+    }
+    .new-card-content {
+        padding: 3em;
+        color: #ddae71;
+        text-align: center;
+        font-size: .8em;
+    }
+    
+    .new-card-content h2 {
+        font-size: 1em;
+        color: #ffe9cd;
+        
+    }
+
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .iconBox {
+        font-size: 10px;
+        padding: 30px; 
+        margin-left: 5%;
+    }
+    
+    .getCooking h1 {
+        font-size: 3em;
+        margin-top: 50px;
+    }
+
+    .getCooking h3 {
+        font-size: 1em;
+        margin-top: 10px;
+    }
+    .tabContainer {
+        margin: 120px auto;
+        
+    }
+        
+    #this-tab-set > label,
+    #this-tab-set > .display {
+        padding: 2em;
+    }
+    #this-tab-set > label {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        margin-top: 0em;
+        font-size: .7em;
+        padding: 2em;
+        width: 116px;
+        
+    }
+    #this-tab-set > input:checked + label {
+        margin-top: -.50em;
+    }
+    #this-tab-set > .display {
+        width: 350px; 
+        padding: 8em;
+        border: 2px solid #ddae71;
+        font-size: 10px;
+        
+    }
+    #this-tab-set {
+          border-radius: 1em;  
+    }
+          
+    .display h1 {
+        font-size: 3em;
+    }
+    form #searchTerm,
+    #searchTermIngred,
+    #searchTermType {
+      padding: 8px 30px;
+      width: 100%;
+      font-size: .6em;
+      margin-top: 10px;
+    }
+    form .dishButton,
+    .ingredButton,
+    .typeButton {
+      padding: 7px 12px;
+      font-size: .4em;
+      margin-top: 5px;
+    }
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card {
+        flex: 0 1 calc(25% - 1em);
+    }
+    p.rating > span {
+        padding: 1px 38px;
+    }
+    .servings {
+        margin: 5px;
+        float: left;
+        font-size: 1.2em;
+        color: #ddae71;
+    }
+    
+    .time {
+        margin: 5px;
+        float: right;
+        font-size: 1.2em;
+        color: #ddae71;
+    }
+    .sourceLink {
+        color: #ddae71;
+        font-size: 1.2em;
+        margin: 5px;
+    }
+    
+    .rating {
+        font-size: 2em;
+        color: #ddae71;
+    }
+    
+
+}
+
+@media (min-width: 1440px){
+    .card {
+        flex: 0 1 calc(16% - 1em);
+    }
+    p.rating > span {
+        padding: 1px 46px;
+    }
+}
+    
+
+@media (max-width: 320px){
+    .iconBox {
+        font-size: 4px;
+        padding: 11px; 
+        margin-left: 1%;
+    }
+    .getCooking {
+        margin-top: 5px;
+    }
+    
+    .getCooking h1 {
+        font-size: 2em;
+        
+    }
+
+    .getCooking h3 {
+        font-size: .8em;
+        
+    }
+    .tabContainer {
+        margin-top: 180px;
+        width: 200px;
+        height: 100px;
+    }
+    #this-tab-set > label,
+    #this-tab-set > .display {
+        padding: 2em;
+    }
+    #this-tab-set > label {
+        padding-top: 1.2em;
+        padding-bottom: 1em;
+        margin-top: 0em;
+        font-size: .7em;
+    }
+    #this-tab-set > input:checked + label {
+        margin-top: -.50em;
+    }
+    #this-tab-set > .display {
+        width: 251px; 
+        padding: 2em;
+        border: 2px solid #ddae71;
+        font-size: 10px;
+        padding: 60px;
+    }
+    #this-tab-set {
+          border-radius: 1em;  
+    }
+    .display h1 {
+        font-size: 2em;
+    }
+    form #searchTerm,
+    #searchTermIngred,
+    #searchTermType {
+      padding: 8px 30px;
+      width: 100%;
+      font-size: .6em;
+      margin-top: 10px;
+    }
+    form .dishButton,
+    .ingredButton,
+    .typeButton {
+      padding: 7px 12px;
+      font-size: .4em;
+      margin-top: 5px;
+    }
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
+    p.rating > span {
+        padding: 1px 28px;
+    }
+    .servings {
+        margin: 5px;
+        float: left;
+        font-size: .6em;
+        color: #ddae71;
+    }
+    
+    .time {
+        margin: 5px;
+        float: right;
+        font-size: .6em;
+        color: #ddae71;
+    }
+    .sourceLink {
+        color: #ddae71;
+        font-size: 1.2em;
+        margin: 5px;
+    }
+    
+    .rating {
+        font-size: .8em;
+        color: #ddae71;
+    }
+    .new-card-content {
+        padding: 2em;
+        color: #ddae71;
+        text-align: center;
+        font-size: .8em;
+    }
+    
+    .new-card-content h2 {
+        font-size: .8em;
+        color: #ffe9cd;
+        
+    }
+
+}
+
+  
+
+ /* @media screen and (min-width: 40em){
     .iconBox{
         font-size: 10px;
         padding: 30px;
@@ -78,228 +791,4 @@ header {
     #this-tab-set > .display{
         padding: 1em;
     }
-}
-
-.cardContainer {
-    display: none;
-    margin: 5%;
-}
-    
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.card {
-    flex: 0 1 calc(30% - 1em);
-}
-
-img {
-    display: block;
-    border: 0;
-    width: 100%;
-    height: auto;
-}
-
-.card {
-    background: rgb(40,43,46);
-    margin-bottom: 2em;
-    border-radius: 10px;
-    box-shadow:
-    rgba(black, 0.66) 0 30px 60px 0,
-    inset #333 0 0 0 5px,
-    inset rgba(white, 0.5) 0 0 0 6px;
-}
-
-.displayNone{
-    display: none;
-}
-
-.card-content {
-    padding: 1.4em;
-    color: #ddae71;
-    text-align: center;
-    
-    
-}
-
-
-.tabContainer {
-    font-family: 'Raleway', sans-serif;
-    display: flex;
-    color: rgb(163, 174, 182);
-   justify-content: center;
-    margin: 200px auto;
-    align-items: center;
-    width: 800px;
-    height: 400px;
-    position: relative;
-    
-    
-}
-
-.getCooking {
-    position: relative;
-    color: #fff;
-    margin-top: 2em;
-    text-align: center;
-}
-
-.getCooking h1 {
-    color: #ddae71;
-    font-size: 3em;
-
-}
-
-.getCooking h3 {
-    position: relative;
-    margin-top: 20px;
-}
-
-.getCooking h3 span {
-    color: #ddae71;
-}
-label {
-    display: block;
-    text-align: center;
-}
-
-.radio {
-    position: relative;
-    
-    display: block;
-  }
-
-  #this-tab-set > label,
-  #this-tab-set > .display {
-    position: relative;
-    float: left;  
-    background-color: rgba(3, 4, 4, 0.6);
-    padding: 4em;
-  }
-  #this-tab-set > label {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    margin-top: 0em;
-    -webkit-transition: margin .25s;
-    
-  }
-  #this-tab-set > input:checked + label {
-    background-color: rgb(100, 100, 100);
-    margin-top: -.75em;
-    border: 2px solid #ddae71;
-
-    box-shadow:
-        0em .5em 1em -.2em rgba(0,0,0, .5),
-        0em .5em .5em -.2em rgba(0,0,0, .7);
-        z-index: 3;
-    
-   
-  }
-  #this-tab-set > label:hover {
-    box-shadow: 
-      0em .5em 1em -.2em rgba(0,0,0, .25),
-      0em .5em .5em -.2em rgba(0,0,0, .3);
-    
-    margin-top: -.3em;
-  }
-  
-  #this-tab-set > input:checked + label {
-    background-color: rgba(3, 4, 4, 0.6);
-    opacity: initial;
-
-  }
-  #this-tab-set > .display {
-    clear: both;
-    width: 548px; 
-    padding: 4em;
-    border: 2px solid #ddae71;
-    text-align: center;
-    font-size: 30px;
-    
-    
-  }
-
-  form #searchTerm {
-      padding: 15px 30px;
-      width: 100%;
-      background-color: rgb(40,43,46);
-      border: 1px solid #ddae71;
-      color: #ddae71;
-      font-size: .5em;
-  }
-
-.button {
-      padding: 15px 25px;
-      color: #ddae71;
-      font-size: .5em;
-      background-color: rgb(40,43,46);
-      border: 1px solid #ddae71;
-}
-
-  
- 
-  #this-tab-set {
-    border-radius: 1em;  
- }  
-  
-  #this-tab-set > label:nth-child(2) {
-    border-top-left-radius: inherit;
-  }
-  #this-tab-set > label:nth-child(6) {
-    border-top-right-radius: inherit;
-  }
-  #this-tab-set > .display {
-    border-bottom-right-radius: inherit;
-    border-bottom-left-radius: inherit;
-  }
-  .radio-tabs > input {
-    position: absolute;
-    visibility: hidden;
-  }
-  
-  .radio-tabs > label {
-    cursor: pointer;
-  }
-  .radio-tabs > .display {
-    position: absolute;
-    visibility: hidden;
-  }
-  
-  .radio-tabs > .tab-1-display {
-    position: relative;
-    visibility: visible;
-  }
-  .radio-tabs > #tab-1:checked ~ .tab-1-display {
-    position: relative;
-    visibility: visible;
-  }
-  .radio-tabs > #tab-1:checked ~ .tab-2-display,
-  .radio-tabs > #tab-1:checked ~ .tab-3-display {
-    position: absolute;
-    visibility: hidden;
-  }
-  
-  .radio-tabs > #tab-2:checked ~ .tab-2-display {
-    position: relative;
-    visibility: visible;
-  }
-  .radio-tabs > #tab-2:checked ~ .tab-3-display,
-  .radio-tabs > #tab-2:checked ~ .tab-1-display {
-    position: absolute;
-    visibility: hidden;
-  }
-  
-  .radio-tabs > #tab-3:checked ~ .tab-3-display {
-    position: relative;
-    visibility: visible;
-  }
-  .radio-tabs > #tab-3:checked ~ .tab-2-display,
-  .radio-tabs > #tab-3:checked ~ .tab-1-display {
-    position: absolute;
-    visibility: hidden;
-  }
-
-
-  
+} */
