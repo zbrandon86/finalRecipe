@@ -171,6 +171,7 @@ function searchByDishTerm(){
         event.preventDefault();
         const dishWordSearch = $('#searchTerm').val();
         dishWordCall(dishWordSearch);
+        window.location.reload();
         $('.getCooking').hide();
         $('.tabContainer').hide();
         $('.mainHead').hide();
