@@ -1,9 +1,9 @@
 //urls&ids
 const yumAppId = 'ccbaf8cc';
 const appKey = 'c0aa2b9d9790910d313bbf9474f7febb';
-const yumIDURL = 'http://api.yummly.com/v1/api/recipe/'
-const yumRecpURL ='http://api.yummly.com/v1/api/recipes?';
-const yumRecpIngred = 'http://api.yummly.com/v1/api/metadata/ingredient?'
+const yumIDURL = 'https://api.yummly.com/v1/api/recipe/'
+const yumRecpURL ='https://api.yummly.com/v1/api/recipes?';
+const yumRecpIngred = 'https://api.yummly.com/v1/api/metadata/ingredient?'
 const options2 = {
     headers: new Headers({
         "X-Yummly-App-ID": yumAppId,
