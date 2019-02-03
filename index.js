@@ -40,9 +40,7 @@ function dishWordCall(q){
 
 //Results 1st
 function useResults(data){
-    console.log(data);
     let results = data.matches;	
-    console.log(results);
     $.each(results, function(key, value){
         let time = value.totalTimeInSeconds;
         let totalTimeToCook = Math.floor(time / 60);
@@ -90,7 +88,6 @@ function useResults(data){
 
 //Results 2nd
 function showResults(res){
-    console.log(res);
     $('.cardContainer').hide();
     $('.recpDetails').show();
 
@@ -132,7 +129,6 @@ function ingredWordCall(ingredient){
     };
     const queryString = formatParams(params)
     const url = yumRecpURL + queryString;
-    console.log(url);
 
     fetch(url, options2)
     .then(response => {
@@ -153,7 +149,6 @@ function typeWordCall(typeFood){
     };
     const queryString = formatParams(params)
     const url = yumRecpURL + '&allowedCuisine[]=cuisine^cuisine-'+ typeFood + '&' + queryString;
-    console.log(url);
 
     fetch(url, options2)
     .then(response => {
